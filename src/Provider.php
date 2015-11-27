@@ -131,13 +131,12 @@ class Provider
     /**
      * @param string $scope The scope name that is required to be present. If null, the scope of
      *    the access token is not checked.
-     * @return Provider
+     * @return bool
      */
     public function verifyResourceRequest($scope = null)
     {
-        $this->getOAuthServer()->verifyResourceRequest($this->getOAuthRequest(),
+        return $this->getOAuthServer()->verifyResourceRequest($this->getOAuthRequest(),
             $this->getOAuthResponse(), $scope);
-        return $this;
     }
 
     /**
