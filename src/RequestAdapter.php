@@ -56,7 +56,7 @@ class RequestAdapter implements RequestInterface
         if ($this->data === null)
         {
             /* @var $contentType ContentType */
-            $mediaType  = $this->httpRequest->getHeaders('Content-type')->getFieldValue();
+            $mediaType = $this->httpRequest->getHeaders('Content-type') ? $this->httpRequest->getHeaders('Content-type')->getFieldValue() : null;
 
             if ($mediaType == 'application/x-www-form-urlencoded'
                 && ($this->httpRequest->isPut() || $this->httpRequest->isDelete()))
