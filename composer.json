@@ -1,5 +1,5 @@
 {
-    "name": "codeacious/oauth2-provider",
+    "name": "victor-alencar/oauth2-provider",
     "description": "A simple and clean Zend Framework 2 wrapper for the oauth2-server-php library",
     "type": "library",
     "license": "MIT",
